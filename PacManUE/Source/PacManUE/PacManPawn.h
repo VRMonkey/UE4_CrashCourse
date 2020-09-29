@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "PacManPawn.generated.h"
+#include "PacmanPawn.generated.h"
 
 UCLASS()
-class PACMANUE_API APacManPawn : public APawn
+class PACMANUE_API APacmanPawn : public APawn
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this pawn's properties
-	APacManPawn();
+	APacmanPawn();
 
 protected:
 	// Called when the game starts or when spawned
