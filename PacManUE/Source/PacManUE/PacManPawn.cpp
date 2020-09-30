@@ -2,6 +2,7 @@
 
 
 #include "PacmanPawn.h"
+#include "Food.h"
 
 // Sets default values
 APacmanPawn::APacmanPawn()
@@ -16,7 +17,7 @@ void APacmanPawn::BeginPlay()
 {
 	Super::BeginPlay();
 
-	OnActorBeginOverlap.AddDynamic(this, &APacmanPawn::OnOverlabBegin);
+	OnActorBeginOverlap.AddDynamic(this, &APacmanPawn::OnOverlapBegin);
 	
 }
 
@@ -54,7 +55,14 @@ void APacmanPawn::SetDirection(const FVector Direction)
 	}
 }
 
-void APacmanPawn::OnOverlabBegin(AActor* PlayerActor, AActor* OtherActor)
+void APacmanPawn::OnOverlapBegin(AActor* PlayerActor, AActor* OtherActor)
 {
+
+	if (OtherActor->ActorHasTag("Food.Regular"))
+	{
+		Cast<AFood>(OtherActor)->Consume();
+		
+	}
+	
 }
 

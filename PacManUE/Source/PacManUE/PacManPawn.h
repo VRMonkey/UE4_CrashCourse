@@ -42,5 +42,5 @@ public:
 
 private:
 	UFUNCTION()
-		void OnOverlabBegin(AActor* PlayerActor, AActor* OtherActor);
+		void OnOverlapBegin(AActor* PlayerActor, AActor* OtherActor);
 };
