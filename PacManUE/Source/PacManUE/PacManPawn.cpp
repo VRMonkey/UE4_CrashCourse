@@ -63,6 +63,11 @@ void APacmanPawn::OnOverlapBegin(AActor* PlayerActor, AActor* OtherActor)
 		Cast<AFood>(OtherActor)->Consume();
 		
 	}
+	else if (OtherActor->ActorHasTag("Food.PowerUP"))
+	{
+		Cast<AFood>(OtherActor)->Consume();
+
+	}
 	
 }
 
