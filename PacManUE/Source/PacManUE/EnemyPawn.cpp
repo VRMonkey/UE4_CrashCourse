@@ -41,10 +41,17 @@ void AEnemyPawn::Idle()
 }
 
 void AEnemyPawn::Hunt()
-{
+{	
 	State = EEnemyState::Default;
 
 	StateChangedEvent.Broadcast(State);
 	
 }
 
+void AEnemyPawn::Scare()
+{
+	State = EEnemyState::Scared;
+
+	StateChangedEvent.Broadcast(State);
+
+}

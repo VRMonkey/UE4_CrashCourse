@@ -38,12 +38,16 @@ public:
 
 	UPROPERTY(EditAnywhere, blueprintReadWrite)
 		EEnemyState State = EEnemyState::Default;
+
 	
 	UFUNCTION(BlueprintCallable)
 		void Idle();
 
 	UFUNCTION(BlueprintCallable)
 		void Hunt();
+	
+	UFUNCTION(BlueprintCallable)
+		void Scare();
 
 	FEnemyStateChangedEvent& OnStateChanged() { return StateChangedEvent; }
 
